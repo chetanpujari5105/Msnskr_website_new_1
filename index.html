@@ -1109,22 +1109,7 @@
             });
         });
 
-        // Form submission handling
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                // Show success message
-                const btn = form.querySelector('button[type="submit"]');
-                const originalText = btn.textContent;
-                btn.textContent = 'Sent Successfully!';
-                btn.classList.add('bg-sage');
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.classList.remove('bg-sage');
-                    form.reset();
-                }, 3000);
-            });
-        });
+        // Form submission is handled by the Google Sheets script below
     </script>
 
     <!-- Google Sheets Form Submission -->
